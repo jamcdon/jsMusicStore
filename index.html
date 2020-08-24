@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The .js Music Store™</title>
+  <link rel="icon" href="js.png">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id = "topMargin"></div>
+<header id = "vueHeader">
+  <h1><i class="fab fa-js-square"></i>The .js Music Store™</h1>
+  <div class = "right-side">
+  <button v-on:click="clearCart"><i class="fas fa-shopping-cart"> {{cartSize}}</i></button>
+  <button v-on:click="addItem"><i class="far fa-plus-square"></i></button>
+  </div>
+
+</header>
+<main>
+  
+<div id = "app">
+  <div v-if = "hideShow.invisible && !hideShow.addItemInvis">
+    <h2>Add an item to the store</h2>
+    <hr>
+    <h3>Brand</h3>
+    <input v-model = "addBrand"
+           placeholder = "Fender, Maton, Yamaha...">
+    <h3>Name</h3>
+    <input v-model = "addName"
+           placeholder = "Ex: EOB Stratocaster">
+    <h3>Type</h3>
+    <input v-model = "addType"
+           placeholder = "Ex: Electirc Guitar">
+    <h3>Price</h3>
+    <input v-model = "addPrice"
+           placeholder = "Ex: 1299.99"
+           type = "number">
+    <h3>Description</h3>
+    <textarea v-model = "addDesc" 
+              placeholder = "Description..." 
+              rows="4" 
+              cols="50"> </textarea>
+    </input>
+    <br><br>
+  <button v-on:click = "addNewItem">Add to store</button>
+    </div>
+  <div v-if = "!hideShow.invisible">
+  <listing 
+           v-for = "(instrument, index) in instruments" 
+           v-bind:class = "instrument.class"
+           v-bind:name = "instrument.name" 
+           :brand = "instrument.brand" 
+           :price = "instrument.price"
+           :type = "instrument.type" 
+           :img = "instrument.img"
+           :desc = "instrument.desc"
+           :idx = "instrument.indx"
+           v-if = "!instrument.inCart">
+
+  </listing>
+  <div class = "emptyStore" 
+       v-if="instruments.length == vueHeader._data.cartSize">
+    <h1>Store is Empty <i class="far fa-frown"></i></h1>
+  </div>
+</div>
+</div>
+</main>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+html{
+  background-color:ghostwhite;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: scroll;
+
+}
+header{
+  border: 1px #000033;
+  width:99%;
+  height:4.5em;
+  box-shadow: 1px 1px 1px 1px #333333;
+  background-color: #F08080;
+  display:flex;
+  position:fixed;
+  border-radius: 8px;
+}
+header h1{
+  padding-left:3%;
+  font-size: 2.3em;
+  width:11em;
+}
+header button{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+main{
+  padding-top:4.5em;
+}
+#app{
+  padding-top:1em;
+}
+#app img{
+  width:200px;
+  height:200px;
+}
+.listing {
+  border-left: outset;
+  border-bottom:outset;
+  border-top:outset;
+  margin-bottom: 22px;
+  width: 80%;
+  margin-left: 10%;
+}
+.listing h2{
+  text-align: center;
+}
+.right-side{
+  margin-left:auto;
+  margin-right:0;
+  font-size:2.5em;
+  padding-right:1em;
+  padding-top:.5em;
+}
+.right-side button{
+  padding-left:1em;
+}
+#topMargin{
+  position:fixed;
+  background-color:ghostwhite;
+  width:100%;
+  height:.5em;
+  margin-top: -.5em;
+  padding: 0;
+}
+.gridcontainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid1{
+  grid-row: 1;
+  grid-column: 1;
+  padding-left:3em;
+  font-weight:bold;
+}
+.grid2{
+  grid-row: 2 / 3;
+  grid-column: 1;
+}
+.grid3{
+  grid-row: 1;
+  grid-column: 2;
+  font-weight: bold;
+}
+.grid4{
+  grid-row: 2 / 3;
+  grid-column: 2;
+}
+.grid5{
+  grid-row: 1;
+  grid-column: 3;
+  text-align: right;
+  padding-right: 5%;
+}
+.grid5 button{
+  background-color:#F08080;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  font-weight: bold;
+  border-radius: 8px;
+  transition-duration:.5s;
+}
+.grid5 button:hover{
+  background-color: #f6b5b5;
+  color: black;
+}
+.emptyStore{
+  text-align: center;
+}
+.activeYamaha{
+  background-color:white;
+  color:black;
+  transition-duration:.2s;
+}
+.activeYamaha:hover{
+  background-color:mediumaquamarine;
+  color: white;
+}
+.activeFender{
+  background-color:white;
+  color:black;
+  transition-duration:.2s;
+}
+.activeFender:hover{
+  background-color:lightcoral;
+  color: white;
+}
+.activeMaton{
+  background-color:white;
+  color:black;
+  transition-duration:.2s;
+}
+.activeMaton:hover{
+  background-color:lightblue;
+  color: white;
+}
+.activeOther{
+  background-color:white;
+  color:black;
+  transition-duration:.2s;
+}
+.activeOther:hover{
+  background-color:black;
+  color: white;
+}
